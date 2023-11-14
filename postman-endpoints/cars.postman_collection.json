@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "16327b4e-b32c-4ac3-a12e-cd47b3a8494e",
+		"name": "cars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21746563"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjJmNWMzMTBmNmNkZTI3MDg3ZjRlIiwiaWF0IjoxNjk5ODk3OTg5LCJleHAiOjE2OTk5ODQzODl9.9crVeyea-cfcJg2m-sje6UySXXQS_A4qBAzpBArX6Fg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"x6\",\r\n    \"year\": 2012,\r\n    \"producer\":\"BMV\",\r\n    \"price\": 100000,\r\n    \"currency\":\"USD\",\r\n    \"city\":\"Lviv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/cars?page=1&limit=3&sortedBy=price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"cars"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "sortedBy",
+							"value": "price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "car",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/cars/6551dcbca875251e17b9e5de",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"cars",
+						"6551dcbca875251e17b9e5de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZTY3N2IyZjQ0ZTE5MGI0ODUyZTUxIiwiaWF0IjoxNjk5NjQwOTM5LCJleHAiOjE2OTk3MjczMzl9.67KTg87kIdcl5mUMnBIrv_XQbeZQbNO29-am1-M4lYM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/cars/654eeaf15cc32ab558a94963",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"cars",
+						"654eeaf15cc32ab558a94963"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjJmNWMzMTBmNmNkZTI3MDg3ZjRlIiwiaWF0IjoxNjk5NzE2MDU2LCJleHAiOjE2OTk4MDI0NTZ9.udJJ0hZcQmKqhq7gJSZBnfXRByV8ZAONRJk3CHS4wwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"model\": \"X5 Sport\",\r\n\"price\": 1000,\r\n\"year\": \"2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/cars/6532f93175be996eb2234712",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"cars",
+						"6532f93175be996eb2234712"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photo",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjMwYjczMTBmNmNkZTI3MDg3ZjZlIiwiaWF0IjoxNjk5ODAwODM1LCJleHAiOjE2OTk4ODcyMzV9.zskTN9YbgeGImQtUYr1UbqjjDBgVD7pEq3QMlPWAzKM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/User/Desktop/Мусор/AnonymousUkraine.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5200/cars/photo/6550e731aa6ec9863a6f9bd9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"cars",
+						"photo",
+						"6550e731aa6ec9863a6f9bd9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

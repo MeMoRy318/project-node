@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "ef2ef203-b174-42ee-a51d-6ab7c48369f1",
+		"name": "premium",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21746563"
+	},
+	"item": [
+		{
+			"name": "view",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjJmNWMzMTBmNmNkZTI3MDg3ZjRlIiwiaWF0IjoxNjk5ODk1MzgzLCJleHAiOjE2OTk5ODE3ODN9.k6ZUqZrtMlDjemK7x80mhl_CRYPiYk3e8nkMjZUt9uQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/premium/view/6532f967b460efa06f4fa6c8/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"premium",
+						"view",
+						"6532f967b460efa06f4fa6c8",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "average",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjJmNWMzMTBmNmNkZTI3MDg3ZjRlIiwiaWF0IjoxNjk5ODk1MzgzLCJleHAiOjE2OTk5ODE3ODN9.k6ZUqZrtMlDjemK7x80mhl_CRYPiYk3e8nkMjZUt9uQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/premium/average/bmv/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"premium",
+						"average",
+						"bmv",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

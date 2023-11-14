@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "6cf5c8fa-a41d-43e2-915c-a328235c197b",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21746563"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjJmNWMzMTBmNmNkZTI3MDg3ZjRlIiwiaWF0IjoxNjk5Nzk4OTE1LCJleHAiOjE2OTk4ODUzMTV9.oCkLsAO7Kxl67dPRriJTmxVk121kD0t-RQ4jZBpobYg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pupkin\",\r\n    \"email\": \"example31t58@gmail.com\",\r\n    \"password\":\"P@$$word1\",\r\n    \"phone\": \"0985486435\",\r\n    \"premium\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjJmNWMzMTBmNmNkZTI3MDg3ZjRlIiwiaWF0IjoxNjk5NzgwMTQ3LCJleHAiOjE2OTk4NjY1NDd9.2SV2kQs22YqqrbVo29j82nfglcRPQH3JFHA5Ei4cMUU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/users?page=1&limit=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/users/654e30c2578edf7336624ae0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users",
+						"654e30c2578edf7336624ae0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjMwYjczMTBmNmNkZTI3MDg3ZjZlIiwiaWF0IjoxNjk5Njg4NjUwLCJleHAiOjE2OTk3NzUwNTB9.njnyfogf2vAebzSr2VTXI6krBFTip0mPLsTsrsdFlW4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/users/654cd40c298b95f94e7c7d96",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users",
+						"654cd40c298b95f94e7c7d96"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjMwYjczMTBmNmNkZTI3MDg3ZjZlIiwiaWF0IjoxNjk5ODAxNzU1LCJleHAiOjE2OTk4ODgxNTV9.I1Pr6zChrDTNhjdk_6UvtVrwnvKr21L5PLzn9VgMI6M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pupkin\",\r\n    \"email\": \"example318@gmail.com\",\r\n    \"password\":\"P@$$word5\",\r\n    \"phone\": \"0985486435\",\r\n    \"premium\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/users/654e30c2578edf7336624ae0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users",
+						"654e30c2578edf7336624ae0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "avatar",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjMwYjczMTBmNmNkZTI3MDg3ZjZlIiwiaWF0IjoxNjk5ODAwODM1LCJleHAiOjE2OTk4ODcyMzV9.zskTN9YbgeGImQtUYr1UbqjjDBgVD7pEq3QMlPWAzKM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/User/Desktop/Мусор/AnonymousUkraine.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5200/users/avatar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users",
+						"avatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "premium",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZjMwYjczMTBmNmNkZTI3MDg3ZjZlIiwiaWF0IjoxNjk5ODAxNzU1LCJleHAiOjE2OTk4ODgxNTV9.I1Pr6zChrDTNhjdk_6UvtVrwnvKr21L5PLzn9VgMI6M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5200/users/premium",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"users",
+						"premium"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

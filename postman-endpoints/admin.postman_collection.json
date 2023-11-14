@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "fffc5779-0d8c-4749-83e2-1aa336d19c7f",
+		"name": "admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21746563"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pukin\",\r\n    \"email\": \"exemple22@gmail.com\",\r\n    \"password\": \"P@$$word1\",\r\n    \"phone\": \"0985486435\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/admin/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdXNlcklkIjoiNjU0ZWY5ZmFmNTMxODE1YTRkNzg3ZGUwIiwiaWF0IjoxNjk5Njc1NDc3LCJleHAiOjE2OTk3NjE4Nzd9.EH2jk8y56dpUUdd2x2sOFQ1KhuiPtnvtP7SUzSxiGRU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"manager\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5200/admin/654e30c2578edf7336624ae0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"admin",
+						"654e30c2578edf7336624ae0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
